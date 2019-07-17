@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SPBU Care</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="beranda">Beranda</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="bantuan">Bantuan</string>
+    <string name="navigation_drawer_header_title" translatable="false">Sunflower</string>
+    <string name="navigation_drawer_header_content_description"
+        translation_description="Content description for the image that is shown at the top of the navigation drawer.">
+        Navigation drawer header logo
+    </string>
+</resources>

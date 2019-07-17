@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fill_half_dashboard_card"
+        tools:context=".view.DashboardFragment">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:text="Explore"
+            android:textColor="@color/colorWhite"
+            android:textSize="35sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/cancle_card"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/card_all_rounded15"
+            android:clickable="true"
+            android:elevation="8dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/deposit_card"
+            app:layout_constraintBottom_toBottomOf="@id/deposit_card"
+            app:layout_constraintEnd_toStartOf="@id/deposit_card">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/cancel"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintTop_toBottomOf="@id/cancle_card"
+                app:layout_constraintEnd_toStartOf="@+id/setor_title"
+                android:layout_marginEnd="28dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Batal"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/deposit_card"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/card_all_rounded15"
+            android:clickable="true"
+            android:elevation="8dp"
+            android:layout_marginTop="50dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:src="@drawable/truck"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/setor_title"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintTop_toBottomOf="@+id/deposit_card">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Setor"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addition_card"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/card_all_rounded15"
+            android:clickable="true"
+            android:elevation="8dp"
+            app:layout_constraintStart_toEndOf="@id/deposit_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/deposit_card"
+            app:layout_constraintBottom_toBottomOf="@id/deposit_card"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                    android:layout_width="35dp"
+                    android:src="@drawable/add"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="35dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="3dp"
+                app:layout_constraintTop_toBottomOf="@id/addition_card"
+                app:layout_constraintStart_toEndOf="@+id/setor_title"
+                android:layout_marginStart="28dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tambah"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/complaint_card"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/card_all_rounded15"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/inbox_card"
+                app:layout_constraintEnd_toStartOf="@id/inbox_card">
+
+            <ImageView
+                    android:layout_width="45dp"
+                    android:src="@drawable/cs"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="40dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/inbox_card"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/card_all_rounded15"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:layout_marginTop="45dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/deposit_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                    android:layout_width="30dp"
+                    android:src="@drawable/email"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/education_card"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/card_all_rounded15"
+                android:clickable="true"
+                android:elevation="8dp"
+                app:layout_constraintStart_toEndOf="@id/inbox_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/inbox_card"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:layout_width="40dp"
+                    android:src="@drawable/education"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/quiz_card"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/card_all_rounded15"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/complaint_card"
+                android:layout_marginStart="28dp">
+
+            <ImageView
+                    android:layout_width="40dp"
+                    android:src="@drawable/flask"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/feedback_card"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/card_all_rounded15"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:layout_marginTop="35dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/inbox_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                    android:layout_width="30dp"
+                    android:src="@drawable/saran"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/information_card"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/card_all_rounded15"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toEndOf="@id/inbox_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/education_card"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:layout_width="30dp"
+                    android:src="@drawable/website"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/pull_card"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/card_all_rounded15"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:layout_marginTop="35dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/feedback_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.276">
+
+            <ImageView
+                    android:layout_width="45dp"
+                    android:src="@drawable/pull"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="45dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/emergency_card"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/card_all_rounded15"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/feedback_card"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_marginEnd="68dp"
+                app:layout_constraintStart_toEndOf="@+id/pull_card"
+                android:layout_marginStart="8dp"
+                app:layout_constraintHorizontal_bias="0.775">
+
+            <ImageView
+                    android:layout_width="40dp"
+                    android:src="@drawable/light"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="40dp"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

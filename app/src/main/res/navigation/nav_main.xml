@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_football"
+    android:label="League"
+    app:startDestination="@id/dashboard_dest">
+
+    <fragment
+        android:id="@+id/dashboard_dest"
+        android:name="com.pertamina.spbucare.view.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_show_cancle"
+            app:destination="@id/cancle_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_show_deposit"
+            app:destination="@id/deposit_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_show_addition"
+            app:destination="@id/addition_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:id="@+id/help_dest" android:name="com.pertamina.spbucare.view.HelpFragment"
+              android:label="Bantuan" tools:layout="@layout/fragment_help"/>
+    <fragment android:id="@+id/setting_dest" android:name="com.pertamina.spbucare.view.SettingFragment"
+              android:label="Pengaturan" tools:layout="@layout/fragment_setting"/>
+    <fragment
+        android:id="@+id/cancle_dest"
+        android:name="com.pertamina.spbucare.view.CancleFragment"
+        android:label="Batal"
+        tools:layout="@layout/fragment_cancle" />
+    <fragment
+        android:id="@+id/deposit_dest"
+        android:name="com.pertamina.spbucare.view.DepositFragment"
+        android:label="Setor"
+        tools:layout="@layout/fragment_deposit" />
+    <fragment
+        android:id="@+id/addition_dest"
+        android:name="com.pertamina.spbucare.view.AdditionFragment"
+        android:label="Tambah"
+        tools:layout="@layout/fragment_addition" />
+    <fragment
+        android:id="@+id/emergency_dest"
+        android:name="com.pertamina.spbucare.view.EmergencyFragment"
+        android:label="Emergency"
+        tools:layout="@layout/fragment_emergency" />
+    <fragment
+        android:id="@+id/withdrawal_dest"
+        android:name="com.pertamina.spbucare.view.WithdrawalFragment"
+        android:label="Tarik LO"
+        tools:layout="@layout/fragment_withdrawal" />
+</navigation>
