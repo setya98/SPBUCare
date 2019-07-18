@@ -17,7 +17,7 @@ class DashboardFragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentDashboardBinding.inflate(inflater, container, false).apply {
+    binding = FragmentDashboardBinding.inflate(inflater, container, false).apply {
             cancleCard.setOnClickListener {
                 val action = DashboardFragmentDirections.actionShowCancle()
                 findNavController().navigate(action)

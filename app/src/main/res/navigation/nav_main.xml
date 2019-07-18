@@ -13,7 +13,7 @@
         tools:layout="@layout/fragment_dashboard">
         <action
             android:id="@+id/action_show_cancle"
-            app:destination="@id/cancle_dest"
+            app:destination="@id/cancel_dest"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -32,13 +32,14 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@+id/action_dashboard_dest_to_complaintFragment" app:destination="@id/complaint_dest"/>
     </fragment>
     <fragment android:id="@+id/help_dest" android:name="com.pertamina.spbucare.view.HelpFragment"
               android:label="Bantuan" tools:layout="@layout/fragment_help"/>
     <fragment android:id="@+id/setting_dest" android:name="com.pertamina.spbucare.view.SettingFragment"
               android:label="Pengaturan" tools:layout="@layout/fragment_setting"/>
     <fragment
-        android:id="@+id/cancle_dest"
+        android:id="@+id/cancel_dest"
         android:name="com.pertamina.spbucare.view.CancleFragment"
         android:label="Batal"
         tools:layout="@layout/fragment_cancle" />
@@ -62,4 +63,6 @@
         android:name="com.pertamina.spbucare.view.WithdrawalFragment"
         android:label="Tarik LO"
         tools:layout="@layout/fragment_withdrawal" />
+    <fragment android:id="@+id/complaint_dest" android:name="com.pertamina.spbucare.ComplaintFragment"
+              android:label="Komplain" tools:layout="@layout/fragment_complaint"/>
 </navigation>
