@@ -2,13 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.drawerlayout.widget.DrawerLayout
-            android:id="@+id/drawer_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true">
-
-        <LinearLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -22,7 +16,7 @@
 
                 <androidx.appcompat.widget.Toolbar
                         android:id="@+id/toolbar"
-                        android:background="#9E6E84"
+                        android:background="#FFFF"
                         android:layout_width="match_parent"
                         android:layout_height="?attr/actionBarSize"
                         app:popupTheme="@style/AppTheme.PopupOverlay">
@@ -45,17 +39,16 @@
                     app:defaultNavHost="true"
                     app:navGraph="@navigation/nav_main" />
 
-        </LinearLayout>
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/main_bottom_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    style="@style/BottomNavigationView"
+                    app:itemTextColor="@drawable/bottom_navigation_selector"
+                    app:itemIconTint="@drawable/bottom_navigation_selector"
+                    app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+                    app:menu="@menu/menu_navigation" />
 
-        <com.google.android.material.navigation.NavigationView
-                android:id="@+id/navigation_view"
-                style="@style/Widget.MaterialComponents.NavigationView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-                app:headerLayout="@layout/nav_header"
-                app:menu="@menu/menu_navigation" />
-
-    </androidx.drawerlayout.widget.DrawerLayout>
-
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
