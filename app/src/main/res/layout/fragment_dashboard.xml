@@ -5,42 +5,40 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/fill_half_dashboard_card"
-        tools:context=".view.DashboardFragment">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.DashboardFragment">
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:text="Explore"
-            android:textColor="@color/colorWhite"
-            android:textSize="35sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+                android:id="@+id/logo_background"
+                android:layout_width="150dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="50dp"/>
 
         <LinearLayout
-            android:id="@+id/cancle_card"
-            android:layout_width="95dp"
-            android:layout_height="95dp"
-            android:background="@drawable/card_all_rounded15"
-            android:clickable="true"
-            android:elevation="8dp"
-            android:focusable="true"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/deposit_card"
-            app:layout_constraintBottom_toBottomOf="@id/deposit_card"
-            app:layout_constraintEnd_toStartOf="@id/deposit_card">
+                android:id="@+id/cancle_card"
+                android:layout_width="72dp"
+                android:layout_height="71dp"
+                android:background="@drawable/card_all_rounded15"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/deposit_card"
+                app:layout_constraintBottom_toBottomOf="@id/deposit_card"
+                app:layout_constraintEnd_toStartOf="@id/deposit_card">
 
             <ImageView
-                android:layout_width="30dp"
-                android:src="@drawable/cancel"
-                android:layout_gravity="center_horizontal"
-                android:layout_height="30dp"/>
+                    android:layout_width="35dp"
+                    android:src="@drawable/cancel"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="35dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -48,38 +46,39 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
+                android:layout_marginEnd="15dp"
                 app:layout_constraintTop_toBottomOf="@id/cancle_card"
-                app:layout_constraintEnd_toStartOf="@+id/setor_title"
-                android:layout_marginEnd="28dp">
+                app:layout_constraintEnd_toStartOf="@+id/setor_title">
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Batal"
+                    android:fontFamily="@font/montserrat2"
                     android:layout_gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20sp"/>
+                    android:textSize="18sp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/deposit_card"
-            android:layout_width="95dp"
-            android:layout_height="95dp"
-            android:background="@drawable/card_all_rounded15"
-            android:clickable="true"
-            android:elevation="8dp"
-            android:layout_marginTop="50dp"
-            android:focusable="true"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/tv_title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+                android:id="@+id/deposit_card"
+                android:layout_width="72dp"
+                android:layout_height="71dp"
+                android:background="@drawable/card_all_rounded2"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:layout_marginTop="40dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logo_background"
+                app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
-                android:layout_width="40dp"
-                android:src="@drawable/truck"
-                android:layout_gravity="center_horizontal"
-                android:layout_height="40dp"/>
+                    android:layout_width="35dp"
+                    android:src="@drawable/truck"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="38dp"/>
 
         </LinearLayout>
 
@@ -96,28 +95,29 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="Setor"
+                    android:fontFamily="@font/montserrat2"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20sp"/>
+                    android:textSize="18sp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/addition_card"
-            android:layout_width="95dp"
-            android:layout_height="95dp"
-            android:background="@drawable/card_all_rounded15"
-            android:clickable="true"
-            android:elevation="8dp"
-            app:layout_constraintStart_toEndOf="@id/deposit_card"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/deposit_card"
-            app:layout_constraintBottom_toBottomOf="@id/deposit_card"
-            android:focusable="true"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+                android:id="@+id/addition_card"
+                android:layout_width="72dp"
+                android:layout_height="71dp"
+                android:background="@drawable/card_all_rounded3"
+                android:clickable="true"
+                android:elevation="8dp"
+                app:layout_constraintStart_toEndOf="@id/deposit_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/deposit_card"
+                app:layout_constraintBottom_toBottomOf="@id/deposit_card"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
             <ImageView
                     android:layout_width="35dp"
-                    android:src="@drawable/add"
+                    android:src="@drawable/plus"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="35dp"/>
         </LinearLayout>
@@ -129,42 +129,61 @@
                 android:layout_marginTop="3dp"
                 app:layout_constraintTop_toBottomOf="@id/addition_card"
                 app:layout_constraintStart_toEndOf="@+id/setor_title"
-                android:layout_marginStart="28dp">
+                android:layout_marginStart="18dp">
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tambah"
+                    android:fontFamily="@font/montserrat2"
                     android:layout_gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20sp"/>
+                    android:textSize="18sp"/>
         </LinearLayout>
 
         <LinearLayout
                 android:id="@+id/complaint_card"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:background="@drawable/card_all_rounded15"
+                android:layout_width="72dp"
+                android:layout_height="71dp"
+                android:background="@drawable/card_all_rounded2"
                 android:clickable="true"
                 android:elevation="8dp"
                 android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/inbox_card"
-                app:layout_constraintEnd_toStartOf="@id/inbox_card">
+                app:layout_constraintBottom_toBottomOf="@id/withdraw_card"
+                app:layout_constraintEnd_toStartOf="@id/withdraw_card">
 
             <ImageView
-                    android:layout_width="45dp"
+                    android:layout_width="35dp"
                     android:src="@drawable/cs"
                     android:layout_gravity="center_horizontal"
-                    android:layout_height="40dp"/>
+                    android:layout_height="34dp"/>
         </LinearLayout>
 
         <LinearLayout
-                android:id="@+id/inbox_card"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:background="@drawable/card_all_rounded15"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                app:layout_constraintTop_toBottomOf="@id/complaint_card"
+                app:layout_constraintEnd_toStartOf="@+id/tarik_title">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keluhan"
+                    android:fontFamily="@font/montserrat2"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/withdraw_card"
+                android:layout_width="72dp"
+                android:layout_height="71dp"
+                android:background="@drawable/card_all_rounded3"
                 android:clickable="true"
                 android:elevation="8dp"
                 android:layout_marginTop="45dp"
@@ -176,148 +195,96 @@
                 app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
-                    android:layout_width="30dp"
-                    android:src="@drawable/email"
+                    android:layout_width="35dp"
+                    android:src="@drawable/withdrawal"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="30dp"/>
         </LinearLayout>
 
         <LinearLayout
-                android:id="@+id/education_card"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:background="@drawable/card_all_rounded15"
-                android:clickable="true"
-                android:elevation="8dp"
-                app:layout_constraintStart_toEndOf="@id/inbox_card"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/inbox_card"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
-
-            <ImageView
-                    android:layout_width="40dp"
-                    android:src="@drawable/education"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="40dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-                android:id="@+id/quiz_card"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:background="@drawable/card_all_rounded15"
-                android:clickable="true"
-                android:elevation="8dp"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:layout_marginTop="35dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/complaint_card"
-                android:layout_marginStart="28dp">
-
-            <ImageView
-                    android:layout_width="40dp"
-                    android:src="@drawable/flask"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="40dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-                android:id="@+id/feedback_card"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:background="@drawable/card_all_rounded15"
-                android:clickable="true"
-                android:elevation="8dp"
-                android:layout_marginTop="35dp"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/inbox_card"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-            <ImageView
-                    android:layout_width="30dp"
-                    android:src="@drawable/saran"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="30dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-                android:id="@+id/information_card"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:background="@drawable/card_all_rounded15"
-                android:clickable="true"
-                android:elevation="8dp"
-                android:layout_marginTop="35dp"
-                app:layout_constraintStart_toEndOf="@id/inbox_card"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/education_card"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
-
-            <ImageView
-                    android:layout_width="30dp"
-                    android:src="@drawable/website"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="30dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-                android:id="@+id/pull_card"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:background="@drawable/card_all_rounded15"
-                android:clickable="true"
-                android:elevation="8dp"
-                android:layout_marginTop="35dp"
-                android:focusable="true"
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/feedback_card"
+                android:id="@+id/tarik_title"
+                android:layout_width="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.276">
-
-            <ImageView
-                    android:layout_width="45dp"
-                    android:src="@drawable/pull"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintTop_toBottomOf="@+id/withdraw_card">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_height="45dp"/>
+                    android:text="Tarik LO"
+                    android:fontFamily="@font/montserrat2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
         </LinearLayout>
 
         <LinearLayout
                 android:id="@+id/emergency_card"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
+                android:layout_width="72dp"
+                android:layout_height="71dp"
                 android:background="@drawable/card_all_rounded15"
                 android:clickable="true"
                 android:elevation="8dp"
-                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toEndOf="@id/withdraw_card"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/feedback_card"
+                app:layout_constraintBottom_toBottomOf="@id/withdraw_card"
                 android:focusable="true"
                 android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:layout_marginEnd="68dp"
-                app:layout_constraintStart_toEndOf="@+id/pull_card"
-                android:layout_marginStart="8dp"
-                app:layout_constraintHorizontal_bias="0.775">
+                android:orientation="vertical">
 
             <ImageView
-                    android:layout_width="40dp"
-                    android:src="@drawable/light"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="40dp"/>
+                    android:layout_width="35dp"
+                    android:src="@drawable/siren"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="35dp"/>
+
         </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/darurat_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="3dp"
+                app:layout_constraintTop_toBottomOf="@id/emergency_card"
+                app:layout_constraintStart_toEndOf="@+id/tarik_title"
+                android:layout_marginStart="5dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Darurat"
+                    android:fontFamily="@font/montserrat2"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+        </LinearLayout>
+
+        <View
+                android:id="@+id/separator1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="15dp"
+                android:background="#DDDDDD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/darurat_title" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/informasi"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="45dp"
+                android:fontFamily="@font/montserrat2"
+                app:layout_constraintTop_toTopOf="@+id/separator1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

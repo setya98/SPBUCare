@@ -18,41 +18,43 @@ import com.pertamina.spbucare.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding: ActivityMainBinding = DataBindingUtil.setContentView(this,
+        binding = DataBindingUtil.setContentView(
+            this,
             R.layout.activity_main
         )
-        drawerLayout = binding.drawerLayout
+        val topDestination = setOf(R.id.dashboard_dest,
+            R.id.profile_dest,
+            R.id.notification_dest)
         navController = findNavController(R.id.main_nav_fragment)
-        appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
+        appBarConfiguration = AppBarConfiguration(topDestination)
         setSupportActionBar(binding.toolbar)
         setupActionBarWithNavController(navController, appBarConfiguration)
-        binding.navigationView.setupWithNavController(navController)
+        binding.mainBottomNav.setupWithNavController(navController)
         OnDestinationChanged()
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
-
-    override fun onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START)
-        } else {
-            super.onBackPressed()
-        }
-    }
 
     private fun OnDestinationChanged() =
         navController.addOnDestinationChangedListener { _, destination, _ ->
             val destId = destination.id
             if (destId == R.id.dashboard_dest) {
                 supportActionBar?.title = ""
+                supportActionBar?.show()
+                binding.mainBottomNav.visibility = View.VISIBLE
+            }else {
+                supportActionBar?.show()
+                supportActionBar?.title = ""
+                supportActionBar?.setHomeAsUpIndicator(R.drawable.left)
+                binding.mainBottomNav.visibility = View.GONE
             }
         }
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
 }
