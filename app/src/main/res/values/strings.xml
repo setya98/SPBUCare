@@ -8,10 +8,23 @@
     <string name="bantuan">Bantuan</string>
     <string name="notifikasi">Notifikasi</string>
     <string name="profil">Profil</string>
+    <string name="edukasi">Edukasi</string>
+    <string name="volume">Volume</string>
+    <string name="jumlah">0</string>
+    <string name="kl">KL</string>
+    <string name="masukkan_so">Masukkan No. SO</string>
+    <string name="keterangan">Keterangan</string>
     <string name="informasi">Informasi</string>
     <string name="navigation_drawer_header_title" translatable="false">Sunflower</string>
     <string name="navigation_drawer_header_content_description"
         translation_description="Content description for the image that is shown at the top of the navigation drawer.">
         Navigation drawer header logo
     </string>
+    <string name="darurat">Darurat</string>
+    <string name="tarik_lo">Tarik LO</string>
+    <string name="tambah_planning">Tambah Planning</string>
+    <string name="pembatalan">Pembatalan</string>
+    <string name="setor_angkut">Setor Angkut</string>
+    <string name="batal">Batal</string>
+    <string name="kirim">Kirim</string>
 </resources>

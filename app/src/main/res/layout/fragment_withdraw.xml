@@ -9,8 +9,8 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/fill_half_emergency_card"
-            tools:context=".view.EmergencyFragment">
+            android:background="@drawable/fill_half_withdrawal_card"
+            tools:context=".view.WithdrawalFragment">
 
 
         <TextView

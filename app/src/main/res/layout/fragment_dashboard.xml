@@ -3,21 +3,15 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools">
 
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".view.DashboardFragment">
-
-        <ImageView
-                android:id="@+id/logo_background"
-                android:layout_width="150dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/logo"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_height="50dp"/>
 
         <LinearLayout
                 android:id="@+id/cancle_card"
@@ -70,8 +64,8 @@
                 android:layout_marginTop="40dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="@+id/toolbar"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/logo_background"
                 app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
@@ -267,24 +261,100 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="35dp"
                 android:layout_marginBottom="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:background="#DDDDDD"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/darurat_title" />
 
         <TextView
+                android:id="@+id/information_title"
                 android:layout_width="wrap_content"
                 android:text="@string/informasi"
                 android:textStyle="bold"
                 android:textColor="#000"
                 android:textSize="25sp"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/montserrat2"
                 app:layout_constraintTop_toTopOf="@+id/separator1"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_height="wrap_content"/>
 
+        <com.google.android.material.card.MaterialCardView
+                android:id="@+id/information_card"
+                android:layout_width="250dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="4dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/information_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="120dp">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/spbu"
+                        android:layout_height="wrap_content"/>
+
+                <TextView style="?android:textAppearanceMedium"
+                          android:padding="16dp"
+                          android:lineSpacingMultiplier="1.2"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="@string/beranda" />
+            </ScrollView>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+                android:id="@+id/separator2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#DDDDDD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/information_card" />
+
+        <TextView
+                android:id="@+id/education_title"
+                android:layout_width="wrap_content"
+                android:text="@string/edukasi"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/montserrat2"
+                app:layout_constraintTop_toTopOf="@+id/separator2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content"/>
+
+        <com.google.android.material.card.MaterialCardView
+                android:id="@+id/information_card2"
+                android:layout_width="250dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="4dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/education_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="120dp">
+        </com.google.android.material.card.MaterialCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 </layout>

@@ -43,12 +43,12 @@ class MainActivity : AppCompatActivity() {
     private fun OnDestinationChanged() =
         navController.addOnDestinationChangedListener { _, destination, _ ->
             val destId = destination.id
-            if (destId == R.id.dashboard_dest) {
+            if (destId == R.id.dashboard_dest ||destId == R.id.profile_dest || destId == R.id.notification_dest) {
                 supportActionBar?.title = ""
                 supportActionBar?.show()
                 binding.mainBottomNav.visibility = View.VISIBLE
             }else {
-                supportActionBar?.show()
+                supportActionBar?.hide()
                 supportActionBar?.title = ""
                 supportActionBar?.setHomeAsUpIndicator(R.drawable.left)
                 binding.mainBottomNav.visibility = View.GONE
